@@ -3,6 +3,9 @@ import sqlite3
 from tkinter import ttk
 
 def orderReport():
+    # This function shows only the items that are low and need to be reordered
+
+
     rwin = Toplevel()
     rwin.title('Order List')
 
@@ -13,6 +16,7 @@ def orderReport():
     c = conn.cursor()
 
     # Select items from table in SQL database
+
     c.execute("SELECT *, oid FROM Orderstatus")
     records = c.fetchall()
 
@@ -128,7 +132,7 @@ def deleteInv(barcode):
 def viewInventory():
     # Opening New Window
     inwin = Toplevel()
-    inwin.geometry("600x400")
+    inwin.geometry("700x400")
     inwin.title("Full Inventory")
 
     conn = sqlite3.connect("MonzykInv.db")
@@ -144,7 +148,7 @@ def viewInventory():
 
     style.theme_use('default')
 
-    myTree['columns'] = ('barcode', 'name', 'amount', 'lowreorder')
+    myTree['columns'] = ('barcode', 'name', 'amount', 'lowreorder', 'location')
 
     # Setting Treeview columns
 
@@ -153,6 +157,8 @@ def viewInventory():
     myTree.column('name', width=120, anchor=W)
     myTree.column('amount', width=120, anchor=E)
     myTree.column('lowreorder', width=120, anchor=E)
+    myTree.column('location', width=120, anchor=E)
+
 
     # Setting headings for the treeview
 
@@ -161,12 +167,123 @@ def viewInventory():
     myTree.heading('name', text='Name', anchor=CENTER)
     myTree.heading('amount', text='Amount', anchor=CENTER)
     myTree.heading('lowreorder', text='Low Reorder', anchor=CENTER)
+    myTree.heading('location', text='Location', anchor=CENTER)
+
+
 
     for i in range(len(records)):
-        myTree.insert(parent='', index='end', iid=i, values=(records[i][0], records[i][1], records[i][2], records[i][3]))
+        myTree.insert(parent='', index='end', iid=i, values=(records[i][0], records[i][1], records[i][2], records[i][3], records[i][4]))
 
     myTree.pack(pady= 10)
 
+    conn.commit()
+    conn.close()
+
+def showSearch(value):
+
+    result =Toplevel()
+    result.geometry("700x400")
+    result.title('Search Result')
+
+    # Connecting to Database
+
+    conn = sqlite3.connect("MonzykInv.db")
+    c = conn.cursor()
+
+    # Searching for name in Orderstatus by letter inputed
+
+    c.execute(""" SELECT *, oid FROM orderstatus WHERE name LIKE ? """, (value + '%',))
+
+    # Putting things into loopable variable
+
+    records = c.fetchall()
+
+    # Making Treeview to easily view inventory
+
+    myTree =ttk.Treeview(result, height=15)
+
+    style = ttk.Style()
+
+    style.theme_use('default')
+
+    myTree['columns'] = ('barcode', 'name', 'amount', 'lowreorder', 'location')
+
+    # Setting Treeview columns
+
+    myTree.column('#0', width=0, stretch=0)
+    myTree.column('barcode', width=120, anchor=W)
+    myTree.column('name', width=120, anchor=W)
+    myTree.column('amount', width=120, anchor=E)
+    myTree.column('lowreorder', width=120, anchor=E)
+    myTree.column('location', width=120, anchor=E)
+
+
+    # Setting headings for the treeview
+
+    myTree.heading('#0', text='')
+    myTree.heading('barcode', text='Barcode', anchor=CENTER)
+    myTree.heading('name', text='Name', anchor=CENTER)
+    myTree.heading('amount', text='Amount', anchor=CENTER)
+    myTree.heading('lowreorder', text='Low Reorder', anchor=CENTER)
+    myTree.heading('location', text='Location', anchor=CENTER)
+
+
+
+    for i in range(len(records)):
+        myTree.insert(parent='', index='end', iid=i, values=(records[i][0], records[i][1], records[i][2], records[i][3], records[i][4]))
+
+    myTree.pack(pady= 10)
+
+    # Closing server
+
+
+    conn.commit()
+    conn.close()
+
+    return
+
+
+def searchInv():
+    # Shows Screen for searching inventory by name
+
+    # Opening New Window
+
+    inwin = Toplevel()
+    inwin.geometry("400x200")
+    inwin.title("Full Inventory")
+
+    container = Frame(inwin, padx= 10, pady=10)
+    container.pack(anchor=N)
+
+    top = Frame(container, padx =10, pady=10)
+    top.pack(anchor=N)
+
+    # Connecting to Database
+
+    conn = sqlite3.connect("MonzykInv.db")
+    c = conn.cursor()
+
+    #Making Label
+
+    searchl = Label(top, text= "Name Search", padx= 20)
+
+    # Making Entry
+
+    searchE = Entry(top, width=17, borderwidth=3)
+
+    # Making Button
+
+    getItems = Button(top, text= 'Get Items', padx = 49, pady =10, command= lambda: showSearch(searchE.get()))
+
+    # Object Placement
+
+    searchl.grid(row=0, column=0, sticky=W)
+    searchE.grid(row=0, column=1)
+    getItems.grid(row=1, column =1)
+
+
+
+    # Closing server
     conn.commit()
     conn.close()
 
@@ -175,8 +292,8 @@ def addNewItem():
 
     c = conn.cursor()
 
-    sql = "INSERT INTO Orderstatus (barcode, name, amount, low_reorder) VALUES (:barcode, :name, :amount, :lowreorder)"
-    val = (barcodeE.get(), nameE.get(), amountE.get(), lowamountE.get())
+    sql = "INSERT INTO Orderstatus (barcode, name, amount, low_reorder, location) VALUES (:barcode, :name, :amount, :lowreorder, :location)"
+    val = (barcodeE.get(), nameE.get(), amountE.get(), lowamountE.get(), locationE.get())
 
     try:
         c.execute(sql, val)
@@ -195,15 +312,16 @@ def addNewItem():
     nameE.delete(0, END)
     amountE.delete(0, END)
     lowamountE.delete(0, END)
+    locationE.delete(0,END)
 
-def addNewItem2(barcode, name, amount, low):
-    global barcodeE, nameE, amountE, lowamountE
+def addNewItem2(barcode, name, amount, low, location):
+    global barcodeE, nameE, amountE, lowamountE, locationE
     conn = sqlite3.connect("MonzykInv.db")
 
     c = conn.cursor()
 
-    sql = "INSERT INTO Orderstatus (barcode, name, amount, low_reorder) VALUES (:barcode, :name, :amount, :lowreorder)"
-    val = (barcode, name, amount, low)
+    sql = "INSERT INTO Orderstatus (barcode, name, amount, low_reorder, location) VALUES (:barcode, :name, :amount, :lowreorder, :location)"
+    val = (barcode, name, amount, low, location)
 
     try:
         c.execute(sql, val)
@@ -222,11 +340,12 @@ def addNewItem2(barcode, name, amount, low):
     nameE.delete(0, END)
     amountE.delete(0, END)
     lowamountE.delete(0, END)
+    locationE.delete(0, END)
 
 
 def bottomFrameLook(value):
 
-    global action, barcodeE, amountE, nameE, lowamountE
+    global action, barcodeE, amountE, nameE, lowamountE, locationE
 
     # Destroy the  existing bottom frame
     action.destroy()
@@ -244,6 +363,7 @@ def bottomFrameLook(value):
         nameE = Entry(action, width =17, borderwidth= 3)
         amountE = Entry(action, width =17, borderwidth= 3)
         lowamountE = Entry(action, width =17, borderwidth= 3)
+        locationE = Entry(action, width=17, borderwidth= 3)
 
         # Making Labels for Entries
 
@@ -251,10 +371,11 @@ def bottomFrameLook(value):
         namel = Label(action, text= 'Name', padx= 20)
         amountl = Label(action, text= 'Amount', padx= 20)
         lowamountl =Label(action, text= 'Low reorder', padx= 20)
+        locationl = Label(action, text= 'Location', padx= 20)
 
         # Making Buttons
 
-        nextitem = Button(action, text= "Next Item", padx = 50, pady= 10, command= lambda: addNewItem2(barcodeE.get(), nameE.get(), amountE.get(), lowamountE.get()))
+        nextitem = Button(action, text= "Next Item", padx = 50, pady= 10, command= lambda: addNewItem2(barcodeE.get(), nameE.get(), amountE.get(), lowamountE.get(), locationE.get()))
 
         #Object Placements
 
@@ -262,13 +383,15 @@ def bottomFrameLook(value):
         namel.grid(row=1, column=0, sticky= W)
         amountl.grid(row=2, column=0, sticky= W)
         lowamountl.grid(row=3, column=0, sticky= W)
+        locationl.grid(row=4, column=0, sticky= W)
 
         barcodeE.grid(row=0, column=1)
         nameE.grid(row=1, column=1)
         amountE.grid(row=2, column=1)
         lowamountE.grid(row=3, column=1)
+        locationE.grid(row=4, column=1)
 
-        nextitem.grid(row=4, column=1)
+        nextitem.grid(row=5, column=1)
 
     # Add more to existing inventory item
 
@@ -345,7 +468,7 @@ def bottomFrameLook(value):
 
 root = Tk()
 root.title('Monzyk Innovations Chemical Inventory')
-root.geometry("400x425")
+root.geometry("400x500")
 
 conn = sqlite3.connect("MonzykInv.db")
 
@@ -383,6 +506,8 @@ remove = Radiobutton(selector, text= 'Erase from Inventory', variable= var, valu
 
 viewinv = Button(selector, text = "View Inventory", padx =20, pady= 10, command= viewInventory)
 report = Button(selector, text='Order Report', padx =25, pady=10, command=orderReport)
+search = Button(selector, text='Search Inventory', padx =14, pady=10, command= searchInv)
+
 # Place Radio Buttons
 
 newItem.pack(anchor= W)
@@ -391,6 +516,7 @@ decItem.pack(anchor= W)
 remove.pack(anchor= W)
 viewinv.pack(anchor=W)
 report.pack(anchor=W)
+search.pack(anchor=W)
 
 # Bottom Frame when program first opened
 
@@ -402,14 +528,18 @@ barcodeE = Entry(action, width=17, borderwidth=3)
 nameE = Entry(action, width=17, borderwidth=3)
 amountE = Entry(action, width=17, borderwidth=3)
 lowamountE = Entry(action, width=17, borderwidth=3)
+locationE = Entry(action, width=17, borderwidth=3)
 
 # Making Labels for Entries
+
 barcodel = Label(action, text='Barcode', padx=20)
 namel = Label(action, text='Name', padx=20)
 amountl = Label(action, text='Amount', padx=20)
 lowamountl = Label(action, text='Low reorder', padx=20)
+locationl = Label(action, text='Location', padx=20)
 
 # Making Buttons
+
 nextitem = Button(action, text="Next Item", padx=50, pady=10, command= addNewItem)
 
 # Object Placements
@@ -417,13 +547,17 @@ barcodel.grid(row=0, column=0, sticky=W)
 namel.grid(row=1, column=0, sticky=W)
 amountl.grid(row=2, column=0, sticky=W)
 lowamountl.grid(row=3, column=0, sticky=W)
+locationl.grid(row=4, column=0, sticky=W)
 
 barcodeE.grid(row=0, column=1)
 nameE.grid(row=1, column=1)
 amountE.grid(row=2, column=1)
 lowamountE.grid(row=3, column=1)
+locationE.grid(row=4, column=1)
 
-nextitem.grid(row=4, column=1)
+nextitem.grid(row=5, column=1)
+
+# c.execute(""" ALTER TABLE orderstatus ADD COLUMN location """)
 
 conn.commit()
 conn.close()
