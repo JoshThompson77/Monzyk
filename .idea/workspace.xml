@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4e753530-49ed-42a6-9e25-774c8f78a4df" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1brJr5suUdxn652DJX07B74IV3N" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.CalculationGUI">
+    <configuration name="CalculationGUI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MonzykInnovations" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CalculationGUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DataAnalysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MonzykInnovations" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataAnalysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MonzykInv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MonzykInnovations" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MonzykInv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PA" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MonzykInnovations" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PA.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Titration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MonzykInnovations" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Titration.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.CalculationGUI" />
+        <item itemvalue="Python.MonzykInv" />
+        <item itemvalue="Python.PA" />
+        <item itemvalue="Python.Titration" />
+        <item itemvalue="Python.DataAnalysis" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e753530-49ed-42a6-9e25-774c8f78a4df" name="Default Changelist" comment="" />
+      <created>1589384475183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589384475183</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="437" y="63" key="#Piranha_Analysis" timestamp="1605383063523">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state x="437" y="63" key="#Piranha_Analysis/0.23.1440.814@0.23.1440.814" timestamp="1605383063523" />
+    <state width="1419" height="207" key="GridCell.Tab.0.bottom" timestamp="1610166197196">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="207" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1610166197196" />
+    <state width="1419" height="207" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1609901756906" />
+    <state width="1419" height="207" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1607372441416" />
+    <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1607093604834" />
+    <state width="1419" height="207" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1607626674167" />
+    <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1607059235835" />
+    <state width="1419" height="207" key="GridCell.Tab.0.bottom/0.23.1440.822@0.23.1440.822" timestamp="1607537695004" />
+    <state width="1419" height="207" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1607537122867" />
+    <state width="1419" height="207" key="GridCell.Tab.0.center" timestamp="1610166197195">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="207" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1610166197195" />
+    <state width="1419" height="207" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1609901756904" />
+    <state width="1419" height="207" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1607372441414" />
+    <state width="1419" height="208" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1607093604833" />
+    <state width="1419" height="207" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1607626674166" />
+    <state width="1419" height="208" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1607059235834" />
+    <state width="1419" height="207" key="GridCell.Tab.0.center/0.23.1440.822@0.23.1440.822" timestamp="1607537695003" />
+    <state width="1419" height="207" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1607537122866" />
+    <state width="1419" height="207" key="GridCell.Tab.0.left" timestamp="1610166197194">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="207" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1610166197194" />
+    <state width="1419" height="207" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1609901756904" />
+    <state width="1419" height="207" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1607372441413" />
+    <state width="1419" height="208" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1607093604832" />
+    <state width="1419" height="207" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1607626674165" />
+    <state width="1419" height="208" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1607059235833" />
+    <state width="1419" height="207" key="GridCell.Tab.0.left/0.23.1440.822@0.23.1440.822" timestamp="1607537695002" />
+    <state width="1419" height="207" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1607537122865" />
+    <state width="1419" height="207" key="GridCell.Tab.0.right" timestamp="1610166197196">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="207" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1610166197196" />
+    <state width="1419" height="207" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1609901756905" />
+    <state width="1419" height="207" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1607372441415" />
+    <state width="1419" height="208" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1607093604834" />
+    <state width="1419" height="207" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1607626674167" />
+    <state width="1419" height="208" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1607059235835" />
+    <state width="1419" height="207" key="GridCell.Tab.0.right/0.23.1440.822@0.23.1440.822" timestamp="1607537695003" />
+    <state width="1419" height="207" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1607537122866" />
+    <state x="229" y="69" key="SettingsEditor" timestamp="1607058697637">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="229" y="69" key="SettingsEditor/0.23.1440.816@0.23.1440.816" timestamp="1607058697637" />
+    <state x="399" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1610133757447">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="399" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1610133757447" />
+    <state x="399" y="277" key="com.intellij.ide.util.TipDialog/0.23.1440.811@0.23.1440.811" timestamp="1607368447947" />
+    <state x="399" y="278" key="com.intellij.ide.util.TipDialog/0.23.1440.814@0.23.1440.814" timestamp="1607616440403" />
+    <state x="399" y="279" key="com.intellij.ide.util.TipDialog/0.23.1440.816@0.23.1440.816" timestamp="1607058065100" />
+    <state x="399" y="280" key="com.intellij.ide.util.TipDialog/0.23.1440.822@0.23.1440.822" timestamp="1607529278089" />
+    <state x="248" y="59" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610138147504">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="248" y="59" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1610138147504" />
+    <state x="329" y="23" width="782" height="816" key="find.popup" timestamp="1607058793275">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="329" y="23" width="782" height="816" key="find.popup/0.23.1440.816@0.23.1440.816" timestamp="1607058793275" />
+  </component>
+</project>
